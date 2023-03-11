@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
+
+<!-- En la apertura del ejemplar se incluyen los atributos que permiten
+	 la validación del documento XML contra el esquema XML-Schema
+	 correspondiente.
+	 El atributo xmlns:xsi indica que se utilizará el espacio de nombres
+	 de XML-Schema para la validación.
+	 El atributo xsi:noNamespaceSchemaLocation indica la ruta del esquema
+	 XML-Schema que se utilizará para la validación.
+	 El atributo standalone indica que el documento XML no es autocontenido.
+-->
+
+<viaje xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation = "LMSGI-RA4d-Viajes-XMLSchema-matrioska.xsd" >
+
+
+	<etapa dia = "2022-12-30" >
+		<lugar>Aguilar de Campoo</lugar>
+		<transporte>autobus</transporte>
+		<alojamiento>Casa rural</alojamiento>
+	</etapa>
+
+	<etapa dia = "2023-12-21" >
+		<lugar>Cervera de Pisuerga</lugar>
+		<transporte>taxi</transporte>
+		<alojamiento>Hostal</alojamiento>
+	</etapa>
+
+	<etapa dia = "2023-01-23" >
+		<lugar>Potes</lugar>
+		<transporte>Blablacar</transporte>
+		<alojamiento>Hotel</alojamiento>
+	</etapa>
+</viaje>

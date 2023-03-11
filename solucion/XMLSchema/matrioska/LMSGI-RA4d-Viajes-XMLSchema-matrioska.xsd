@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:annotation>
+	<xs:documentation xml:lang  = "es-es" >
+		<fichero>LMSGI-RA4d-Viajes-XMLSchema-referencia</fichero>
+		<fechaCreacion>24-01-2023</fechaCreacion>
+		<autor>Ana Polo Arozamena</autor>
+		<aplicación>
+			Ejemplo de uso de XSD por el método matrioska.
+		</aplicación>
+		<utilidad>Vocabulario para la validación de ficheros básicos para la gestión de viajes</utilidad>
+	</xs:documentation>
+</xs:annotation>
+
+
+<!-- ********* -->
+<!-- ELEMENTOS -->
+<!-- ********* -->
+
+<!-- Definición de ejemplar -->
+
+	<xs:element name="viaje">
+		<xs:complexType>
+			<xs:sequence>
+
+				<!-- Definición de la etapa -->
+
+				<xs:element name = "etapa" maxOccurs = "unbounded" >
+					<xs:complexType>
+						<xs:sequence>
+
+							<!-- Definición de lugar -->
+
+							<xs:element name="lugar" >
+								<xs:simpleType>
+									<xs:restriction base = "xs:string" >
+										<xs:maxLength value = "30" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<!-- Fin definición de lugar -->
+
+							<!-- Definición de transporte -->
+
+							<xs:element name="transporte" >
+								<xs:simpleType>
+									<xs:restriction base = "xs:string" >
+										<xs:maxLength value = "30" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<!-- Fin definición de transporte -->
+
+							<!-- Definición de alojamiento -->
+
+							<xs:element name="alojamiento">
+								<xs:simpleType>
+									<xs:restriction base = "xs:string" >
+										<xs:maxLength value = "30" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<!-- Fin definición de alojamiento -->
+
+						</xs:sequence>
+
+						<!-- Definición del atributo dia -->
+
+						<xs:attribute name="dia" use="required" type = "xs:date" />
+
+						<!-- Fin definición del atributo dia -->
+
+					</xs:complexType>
+				</xs:element>
+
+				<!-- Fin etapa -->
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Fin ejemplar -->
+
+</xs:schema>
+
+<!-- Fin schema -->

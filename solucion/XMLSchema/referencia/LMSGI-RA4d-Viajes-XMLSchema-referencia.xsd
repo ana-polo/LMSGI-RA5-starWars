@@ -1,0 +1,115 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!-- Definición del vocabulario -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:annotation>
+        <xs:documentation xml:lang  = "es-es" >
+			<fichero>LMSGI-RA4d-Viajes-XMLSchema-referencia</fichero>
+			<fechaCreacion>24-01-2023</fechaCreacion>
+			<autor>Ana Polo Arozamena</autor>
+			<aplicación>
+				Ejemplo de diseño de XML-Schema con referencias.
+			</aplicación>
+            <utilidad>Vocabulario para la validación de ficheros básicos para la gestión de viajes</utilidad> 
+        </xs:documentation>
+    </xs:annotation>
+
+
+	<!-- ********* -->
+	<!-- ELEMENTOS -->
+	<!-- ********* -->
+
+	<!-- Nivel 1 -->
+
+	<!-- Definición del ejemplar: viaje -->
+
+    <xs:element name = "viaje" >
+        <xs:complexType>
+
+			<!-- Declaración de los elementos que forman viaje -->
+
+            <xs:sequence>
+				<xs:element ref = "etapa" minOccurs = "1" maxOccurs = "unbounded" />
+            </xs:sequence>
+
+			<!-- Fin de la declaración de los elementos que forman viaje -->
+
+		</xs:complexType>
+    </xs:element>
+
+	<!-- Fin ejemplar -->
+
+
+	<!-- Nivel 2 -->
+
+	<!-- Definición de etapa -->
+
+	<xs:element name = "etapa" >
+        <xs:complexType>
+
+			<!-- Declaración de los elementos que forman etapa -->
+
+			<xs:sequence>
+				<xs:element ref = "lugar"  />
+				<xs:element ref = "transporte"  />
+				<xs:element ref = "alojamiento"  />
+            </xs:sequence>
+
+			<!-- Fin de la declaración de los elementos que forman etapa -->
+
+			<!-- Declaración de los atributos que forman etapa -->
+
+			<xs:attribute name = "dia" use = "required" type = "xs:date" />
+
+			<!-- Fin de la declaración de los atributos que forman etapa -->
+
+		</xs:complexType>
+    </xs:element>
+
+	<!-- Fin etapa -->
+
+	<!-- Nivel 3 -->
+
+	<!-- Definición de lugar -->
+
+	<xs:element name = "lugar" >
+        <xs:simpleType>
+            <xs:restriction base = "xs:string" >
+                <xs:maxLength value="30" />
+            </xs:restriction>
+		</xs:simpleType>
+    </xs:element>
+
+	<!-- Fin lugar -->
+
+
+	<!-- Definición de transporte -->
+
+	<xs:element name = "transporte" >
+        <xs:simpleType>
+            <xs:restriction base = "xs:string" >
+                <xs:maxLength value="30" />
+            </xs:restriction>
+		</xs:simpleType>
+    </xs:element>
+
+	<!-- Fin transporte -->
+
+
+		<!-- Definición de alojamiento -->
+
+		<xs:element name = "alojamiento" >
+			<xs:simpleType>
+				<xs:restriction base = "xs:string" >
+					<xs:maxLength value="30" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+
+		<!-- Fin alojamiento -->
+
+</xs:schema>
+
+<!-- Fin esquema -->

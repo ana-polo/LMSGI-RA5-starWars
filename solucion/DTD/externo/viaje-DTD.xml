@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE viaje SYSTEM "LMSGI-RA4c-Viaje-DTD.dtd">
+
+
+<viaje>
+		<etapa dia="10/10/2020">
+			<lugar>Aguilar de Campoo</lugar>
+			<transporte>autobus</transporte>
+			<alojamiento>Casa rural</alojamiento>
+		</etapa>
+
+		<etapa dia="11/10/2020">
+			<lugar>Cervera de Pisuerga</lugar>
+			<transporte>taxi</transporte>
+			<alojamiento>Hostal</alojamiento>
+		</etapa>
+
+		<etapa dia="12/10/2020">
+			<lugar>Potes</lugar>
+			<transporte>Blablacar</transporte>
+			<alojamiento>Hotel</alojamiento>
+		</etapa>
+</viaje>

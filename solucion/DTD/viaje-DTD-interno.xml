@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- ****************** -->
+<!-- Definición del DTD -->
+<!-- ****************** -->
+
+<!DOCTYPE viaje [
+
+    <!-- ********* -->
+    <!-- Elementos -->
+    <!-- ********* -->
+
+
+    <!-- *** Nivel 1 *** -->
+
+    <!ELEMENT viaje (etapa+)>
+
+        <!-- *** Nivel 2 *** -->
+
+        <!ELEMENT etapa (lugar, transporte, alojamiento)>
+
+
+            <!-- *** Nivel 2 *** -->
+
+            <!ELEMENT lugar (#PCDATA)>
+            <!ELEMENT transporte (#PCDATA)>
+            <!ELEMENT alojamiento (#PCDATA)>
+
+
+        <!-- ********* -->
+        <!-- Atributos -->
+        <!-- ********* -->
+
+        <!-- Obligatorios -->
+
+        <!ATTLIST etapa dia CDATA #REQUIRED>
+
+]>
+
+
+<!-- **************** -->
+<!-- Instancia de XML -->
+<!-- **************** -->
+
+<viaje>
+		<etapa dia="10/10/2020">
+			<lugar>Aguilar de Campoo</lugar>
+			<transporte>autobus</transporte>
+			<alojamiento>Casa rural</alojamiento>
+		</etapa>
+
+		<etapa dia="11/10/2020">
+			<lugar>Cervera de Pisuerga</lugar>
+			<transporte>taxi</transporte>
+			<alojamiento>Hostal</alojamiento>
+		</etapa>
+
+		<etapa dia="12/10/2020">
+			<lugar>Potes</lugar>
+			<transporte>Blablacar</transporte>
+			<alojamiento>Hotel</alojamiento>
+		</etapa>
+</viaje>

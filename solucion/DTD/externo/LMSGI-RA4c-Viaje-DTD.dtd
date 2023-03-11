@@ -1,0 +1,36 @@
+<!--
+    Fichero: LMSGI-RA4c-Viaje-DTD.dtd
+    Funcionalidad: Ejemplo de dtd para la gestión de los ficheros de tipo viaje.xml.
+
+    Autor: Ana Polo Arozamena
+    IES Alisal
+-->
+
+<!-- ********* -->
+<!-- Elementos -->
+<!-- ********* -->
+
+
+<!-- *** Nivel 1 *** -->
+
+<!ELEMENT viaje (etapa+)>
+
+    <!-- *** Nivel 2 *** -->
+
+    <!ELEMENT etapa (lugar, transporte, alojamiento)>
+
+
+        <!-- *** Nivel 2 *** -->
+
+        <!ELEMENT lugar (#PCDATA)>
+        <!ELEMENT transporte (#PCDATA)>
+        <!ELEMENT alojamiento (#PCDATA)>
+
+
+    <!-- ********* -->
+    <!-- Atributos -->
+    <!-- ********* -->
+
+    <!-- Obligatorios -->
+
+    <!ATTLIST etapa dia CDATA #REQUIRED>
