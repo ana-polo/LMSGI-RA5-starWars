@@ -304,7 +304,7 @@ Dado el código SQL siguiente:
 
 ### Apartado 2
 
-   Modificar el fichero anterior para incluir las restricciones adecuadas a los valores de los diferentes campos, teniendo en cuenta que los datos contenidos en la BD son dados por:
+   Crear un nuevo fichero que modifique el código anterior para incluir las restricciones adecuadas a los valores de los diferentes campos, teniendo en cuenta que los datos contenidos en la BD son dados por:
 
 
 <details>
@@ -543,6 +543,20 @@ Dado el código SQL siguiente:
           ( 21, 70, 69, 2 ), ( 22, 76, 4, 3 ),  ( 23, 77, 4, 3 ),  ( 24, 79, 10, 3 ), ( 25, 81, 4, 4 ), ( 26, 92, 1, 4 ), ( 27, 93, 29, 6 ), ( 28, 96, 4, 5 );
 
 </details>
+
+
+### Apartado 3
+
+   Crear un nuevo fichero que modifique el código anterior para incluir las restricciones adecuadas a las restricciones de clave principal y ajena utilizando los tipos ID e IDREF
+
+### Apartado 4
+
+   Crear un nuevo fichero que modifique el código anterior para incluir las restricciones adecuadas a las restricciones de clave principal y ajena utilizando los tipos ID e IDREF
+
+### Apartado 5
+
+   Crear una instancia de la información en el que se guarden las 5 primeras filas de cada tabla
+
 
 &nbsp;
 &nbsp;
