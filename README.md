@@ -551,7 +551,7 @@ Dado el código SQL siguiente:
 
 ### Apartado 4
 
-   Crear un nuevo fichero que modifique el código anterior para incluir las restricciones adecuadas a las restricciones de clave principal y ajena utilizando los tipos ID e IDREF
+   Crear un nuevo fichero que modifique el código anterior para incluir las restricciones adecuadas a las restricciones de clave principal y ajena utilizando los elementos KEY y KEYREF
 
 ### Apartado 5
 
